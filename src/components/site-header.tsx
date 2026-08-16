@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,10 +15,20 @@ export function SiteHeader() {
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-display text-xl tracking-tight text-foreground"
+          className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          textielbaas
+          <Image
+            src="/images/logo/mark.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9"
+            priority
+          />
+          <span className="font-display text-xl tracking-tight text-foreground">
+            textielbaas
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

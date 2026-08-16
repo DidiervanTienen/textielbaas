@@ -34,10 +34,10 @@ export default function ContactPage() {
               E-mail
             </p>
             <a
-              href="mailto:djvt.10@gmail.com"
+              href="mailto:textielbaas@gmail.com"
               className="mt-3 block text-foreground/85 transition-colors hover:text-thread"
             >
-              djvt.10@gmail.com
+              textielbaas@gmail.com
             </a>
           </Reveal>
           <Reveal delay={0.12}>

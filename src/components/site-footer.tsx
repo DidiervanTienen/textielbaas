@@ -1,16 +1,33 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "@/lib/nav";
+import { InstagramIcon } from "@/components/icons/instagram-icon";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/70 bg-linen-deep">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 sm:grid-cols-3">
         <div>
-          <p className="font-display text-xl text-foreground">textielbaas</p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+          <Image
+            src="/images/logo/full-logo.png"
+            alt="Textielbaas"
+            width={3977}
+            height={1988}
+            className="h-14 w-auto"
+          />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Bedrijfskleding en custom kleding met bedrukking of borduring.
             Persoonlijk advies, duidelijke offerte, zorgvuldige afwerking.
           </p>
+          <a
+            href="https://www.instagram.com/textielbaas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Textielbaas op Instagram"
+            className="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:border-thread hover:text-thread"
+          >
+            <InstagramIcon className="h-4 w-4" />
+          </a>
         </div>
 
         <div>
@@ -54,8 +71,8 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2.5 text-sm text-foreground/85">
             <li>Lange Dresch 7, Akersloot</li>
             <li>
-              <a href="mailto:djvt.10@gmail.com" className="transition-colors hover:text-thread">
-                djvt.10@gmail.com
+              <a href="mailto:textielbaas@gmail.com" className="transition-colors hover:text-thread">
+                textielbaas@gmail.com
               </a>
             </li>
             <li>

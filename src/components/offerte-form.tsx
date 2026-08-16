@@ -34,7 +34,7 @@ export function OfferteForm() {
       .filter(Boolean)
       .join("\n");
 
-    const mailto = `mailto:djvt.10@gmail.com?subject=${encodeURIComponent(
+    const mailto = `mailto:textielbaas@gmail.com?subject=${encodeURIComponent(
       `Offerteaanvraag — ${type}`
     )}&body=${encodeURIComponent(body)}`;
 

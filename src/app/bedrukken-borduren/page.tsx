@@ -5,7 +5,6 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
 import { FabricSwatches } from "@/components/fabric-swatches";
-import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 export const metadata: Metadata = {
   title: "Bedrukken & borduren — TEXTIELBAAS",
@@ -37,11 +36,16 @@ export default function BedrukkenBordurenPage() {
 
       <section className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <PlaceholderPhoto
-            label="Bedrukken & borduren — sfeerfoto"
-            hint="Aanbevolen: close-up van een bedrukt of geborduurd logo"
-            aspect="aspect-[21/9]"
-          />
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/bedrukken-borduren/sfeerfoto.png"
+              alt="Custom apparel studio van Textielbaas — bedrukken en borduren"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1152px) 1152px, 100vw"
+              priority
+            />
+          </div>
         </Reveal>
       </section>
 
