@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
 import { StitchedUnderline } from "@/components/stitched-underline";
-import { ThreadSwatches } from "@/components/thread-swatches";
+import { FabricSwatches } from "@/components/fabric-swatches";
 import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 const FACTS = [
-  { label: "Technieken", value: "DTF · Flex · Zeefdruk" },
-  { label: "Borduren", value: "Tot 12 kleuren" },
+  { label: "Technieken", value: "DTF-print · Borduren" },
+  { label: "Stofkleuren", value: "50+ opties" },
   { label: "Oplage", value: "Vanaf 1 stuk" },
   { label: "Levertijd", value: "± 2–3 weken" },
 ];
@@ -76,10 +76,10 @@ export default function Home() {
 
           <Reveal delay={0.3} className="rounded-2xl border border-border bg-linen-deep p-7">
             <p className="text-sm leading-relaxed text-foreground/75">
-              Elk stuk wordt met de hand afgesteld op de machine — kies hieronder de
-              garenkleur waarin wij jouw logo zouden borduren.
+              Elk stuk wordt met zorg bedrukt of geborduurd — kies hieronder uit
+              meer dan 50 unieke stofkleuren.
             </p>
-            <ThreadSwatches className="mt-6" />
+            <FabricSwatches className="mt-6" />
           </Reveal>
         </div>
       </section>

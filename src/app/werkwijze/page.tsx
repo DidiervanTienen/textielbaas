@@ -18,7 +18,7 @@ const STEPS = [
   {
     number: "02",
     title: "Advies & offerte",
-    body: "Wij adviseren over kledingstuk, techniek en garenkleuren en sturen een duidelijke offerte op maat.",
+    body: "Wij adviseren over kledingstuk, techniek en stofkleuren en sturen een duidelijke offerte op maat.",
   },
   {
     number: "03",

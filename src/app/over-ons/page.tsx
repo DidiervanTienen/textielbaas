@@ -33,7 +33,7 @@ export default function OverOnsPage() {
             Vanuit ons atelier in Akersloot bedrukken en borduren we met zorg — voor
             bedrijven, teams en particulieren door heel Nederland. Elk project krijgt
             persoonlijk advies over de beste techniek, het juiste kledingstuk en de
-            garenkleuren die precies kloppen.
+            stofkleur die precies klopt.
           </p>
         </Reveal>
       </section>

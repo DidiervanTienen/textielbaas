@@ -4,13 +4,13 @@ import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
-import { ThreadSwatches } from "@/components/thread-swatches";
+import { FabricSwatches } from "@/components/fabric-swatches";
 import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 export const metadata: Metadata = {
   title: "Bedrukken & borduren — TEXTIELBAAS",
   description:
-    "DTF, flex, zeefdruk en borduren tot 12 kleuren — wij adviseren de beste afwerking voor jouw ontwerp.",
+    "DTF-print en borduren, in meer dan 50 unieke stofkleuren — wij adviseren de beste afwerking voor jouw ontwerp.",
 };
 
 const TECHNIQUES = [
@@ -20,18 +20,8 @@ const TECHNIQUES = [
     image: "/images/bedrukken-borduren/dtf.png",
   },
   {
-    title: "Flexfolie",
-    body: "Strakke, ondoorzichtige belettering en logo's in effen kleuren — duurzaam en scherp uitgesneden.",
-    image: "/images/bedrukken-borduren/flexfolie.png",
-  },
-  {
-    title: "Zeefdruk",
-    body: "De beste keuze bij grotere oplages met een beperkt aantal kleuren — dekkend en kleurvast.",
-    image: null,
-  },
-  {
     title: "Borduren",
-    body: "Een klassieke, premium afwerking tot 12 kleuren. Ideaal voor borstlogo's op poloshirts en jassen.",
+    body: "Een klassieke, premium afwerking in elke stofkleur. Ideaal voor borstlogo's op poloshirts en jassen.",
     image: "/images/bedrukken-borduren/borduren.png",
   },
 ];
@@ -64,23 +54,15 @@ export default function BedrukkenBordurenPage() {
           {TECHNIQUES.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.06}>
               <div className="flex h-full items-center gap-5 overflow-hidden rounded-2xl border border-border bg-linen-deep p-5">
-                {item.image ? (
-                  <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-xl">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                      sizes="112px"
-                    />
-                  </div>
-                ) : (
-                  <PlaceholderPhoto
-                    compact
-                    aspect="aspect-square"
-                    className="w-28 shrink-0"
+                <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-xl">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="112px"
                   />
-                )}
+                </div>
                 <div>
                   <h3 className="font-display text-xl text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/70">{item.body}</p>
@@ -98,13 +80,13 @@ export default function BedrukkenBordurenPage() {
       <section className="mx-auto max-w-2xl px-6 py-16 text-center">
         <Reveal>
           <p className="font-mono-label text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-            Borduren
+            Stofkleuren
           </p>
           <h2 className="mt-5 font-display text-2xl text-foreground sm:text-3xl">
-            Tot 12 garenkleuren, precies gematcht op jouw huisstijl.
+            Meer dan 50 unieke stofkleuren, klaar om te combineren met jouw ontwerp.
           </h2>
           <div className="mt-8 inline-flex flex-col items-center rounded-2xl border border-border bg-linen-deep px-8 py-7">
-            <ThreadSwatches />
+            <FabricSwatches />
           </div>
         </Reveal>
       </section>
