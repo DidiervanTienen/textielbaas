@@ -1,9 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
 import { StitchedUnderline } from "@/components/stitched-underline";
 import { FabricSwatches } from "@/components/fabric-swatches";
-import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 const FACTS = [
   { label: "Technieken", value: "DTF-print · Borduren" },
@@ -17,16 +17,19 @@ const SERVICES = [
     href: "/bedrijfskleding",
     title: "Bedrijfskleding",
     body: "Professionele kleding voor personeel, teams en organisaties.",
+    image: "/images/bedrijfskleding/sfeerfoto.png",
   },
   {
     href: "/custom-kleding",
     title: "Custom kleding",
     body: "Unieke kleding voor events, vriendengroepen, sportteams en eigen ideeën.",
+    image: "/images/custom-kleding/sfeerfoto.png",
   },
   {
     href: "/bedrukken-borduren",
     title: "Bedrukken & borduren",
     body: "Van borstlogo tot rugprint: wij denken mee over de beste afwerking.",
+    image: "/images/bedrukken-borduren/borduren.png",
   },
 ];
 
@@ -124,7 +127,15 @@ export default function Home() {
                 href={service.href}
                 className="group block h-full overflow-hidden rounded-2xl border border-border bg-linen-deep transition-colors duration-300 hover:border-thread"
               >
-                <PlaceholderPhoto label={service.title} className="rounded-none border-x-0 border-t-0" />
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 640px) 33vw, 100vw"
+                  />
+                </div>
                 <div className="p-7">
                   <h3 className="font-display text-2xl text-foreground">{service.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/70">{service.body}</p>
