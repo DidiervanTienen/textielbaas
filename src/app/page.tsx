@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
 import { StitchedUnderline } from "@/components/stitched-underline";
 import { FabricSwatches } from "@/components/fabric-swatches";
+import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 
 const FACTS = [
   { label: "Technieken", value: "DTF-print · Borduren" },
@@ -75,6 +76,16 @@ export default function Home() {
                 Bekijk onze werkwijze →
               </Link>
             </div>
+            <a
+              href="https://wa.me/31686662826"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animate-rise mt-5 inline-flex items-center gap-2 font-mono-label text-[13px] uppercase tracking-[0.06em] text-foreground/70 transition-colors hover:text-[#25D366]"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <WhatsappIcon className="h-4 w-4 text-[#25D366]" />
+              Liever appen? Stuur ons een WhatsApp voor al je vragen
+            </a>
           </div>
 
           <Reveal delay={0.3} className="rounded-2xl border border-border bg-linen-deep p-7">
