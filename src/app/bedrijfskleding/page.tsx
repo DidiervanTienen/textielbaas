@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
-import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 export const metadata: Metadata = {
   title: "Bedrijfskleding — TEXTIELBAAS",
@@ -15,14 +15,12 @@ const CASES = [
   {
     title: "Personeel & horeca",
     body: "Poloshirts, werkjassen en schorten met borstlogo — herkenbaar en representatief voor je zaak.",
+    image: "/images/bedrijfskleding/horeca.png",
   },
   {
     title: "Teams & sportverenigingen",
     body: "Trainingspakken en teamshirts met naam, rugnummer en clublogo, in de kleuren van je vereniging.",
-  },
-  {
-    title: "Zorg & dienstverlening",
-    body: "Comfortabele, wasbestendige kleding met duidelijke bedrukking voor herkenbaarheid op locatie.",
+    image: "/images/bedrijfskleding/sport.png",
   },
 ];
 
@@ -37,11 +35,16 @@ export default function BedrijfskledingPage() {
 
       <section className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <PlaceholderPhoto
-            label="Bedrijfskleding — sfeerfoto"
-            hint="Aanbevolen: brede foto van personeel of team in bedrijfskleding"
-            aspect="aspect-[21/9]"
-          />
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/bedrijfskleding/sfeerfoto.png"
+              alt="Team van Textielbaas in bedrijfskleding met TB-logo"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1152px) 1152px, 100vw"
+              priority
+            />
+          </div>
         </Reveal>
       </section>
 
@@ -50,11 +53,19 @@ export default function BedrijfskledingPage() {
       </div>
 
       <section className="mx-auto max-w-6xl px-6 pb-16">
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {CASES.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.08}>
               <div className="h-full overflow-hidden rounded-2xl border border-border bg-linen-deep">
-                <PlaceholderPhoto label={item.title} className="rounded-none border-x-0 border-t-0" />
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
                 <div className="p-7">
                   <h3 className="font-display text-xl text-foreground">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.body}</p>
