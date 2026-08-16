@@ -15,7 +15,7 @@ export default function OffertePage() {
       <PageHero
         eyebrow="Offerte aanvragen"
         title="Vertel ons over je project."
-        intro="Vul het formulier in — we nemen binnen korte tijd contact met je op met een vrijblijvende offerte op maat."
+        intro="Vul het formulier in. We nemen binnen korte tijd contact met je op met een vrijblijvende offerte op maat."
       />
 
       <div className="mx-auto max-w-6xl px-6">

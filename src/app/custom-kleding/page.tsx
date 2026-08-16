@@ -8,13 +8,13 @@ import { StitchDivider } from "@/components/stitch-divider";
 export const metadata: Metadata = {
   title: "Custom kleding — TEXTIELBAAS",
   description:
-    "Unieke, custom kleding voor events, vriendengroepen en sportteams — bedrukt of geborduurd.",
+    "Unieke, custom kleding voor events, vriendengroepen en sportteams, bedrukt of geborduurd.",
 };
 
 const CASES = [
   {
     title: "Events & feesten",
-    body: "Vrijgezellenfeesten, festivals of familiedagen — kleding met een ontwerp dat het moment vastlegt.",
+    body: "Vrijgezellenfeesten, festivals of familiedagen: kleding met een ontwerp dat het moment vastlegt.",
     image: "/images/custom-kleding/events.png",
   },
   {
@@ -35,7 +35,7 @@ export default function CustomKledingPage() {
       <PageHero
         eyebrow="Custom kleding"
         title="Jouw idee, vertaald naar kleding."
-        intro="Voor events, vriendengroepen, sportteams en eigen ontwerpen — wij denken mee van eerste schets tot afgewerkt kledingstuk. Al vanaf één stuk."
+        intro="Voor events, vriendengroepen, sportteams en eigen ontwerpen: wij denken mee van eerste schets tot afgewerkt kledingstuk. Al vanaf één stuk."
       />
 
       <section className="mx-auto max-w-6xl px-6">

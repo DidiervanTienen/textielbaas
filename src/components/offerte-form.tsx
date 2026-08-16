@@ -35,7 +35,7 @@ export function OfferteForm() {
       .join("\n");
 
     const mailto = `mailto:textielbaas@gmail.com?subject=${encodeURIComponent(
-      `Offerteaanvraag — ${type}`
+      `Offerteaanvraag: ${type}`
     )}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailto;

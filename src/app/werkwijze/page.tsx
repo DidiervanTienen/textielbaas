@@ -43,7 +43,7 @@ export default function WerkwijzePage() {
       <PageHero
         eyebrow="Werkwijze"
         title="Van idee tot afgewerkt kledingstuk."
-        intro="Geen standaard webshop, maar persoonlijk contact in elke stap — zo weet je altijd waar je aan toe bent."
+        intro="Geen standaard webshop, maar persoonlijk contact in elke stap: zo weet je altijd waar je aan toe bent."
       />
 
       <div className="mx-auto max-w-6xl px-6">

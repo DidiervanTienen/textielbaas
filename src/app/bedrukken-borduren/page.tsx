@@ -9,7 +9,7 @@ import { FabricSwatches } from "@/components/fabric-swatches";
 export const metadata: Metadata = {
   title: "Bedrukken & borduren — TEXTIELBAAS",
   description:
-    "DTF-print en borduren — wij adviseren de beste afwerking en stofkleur voor jouw ontwerp.",
+    "DTF-print en borduren: wij adviseren de beste afwerking en stofkleur voor jouw ontwerp.",
 };
 
 const TECHNIQUES = [
@@ -39,7 +39,7 @@ export default function BedrukkenBordurenPage() {
           <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl">
             <Image
               src="/images/bedrukken-borduren/sfeerfoto.png"
-              alt="Custom apparel studio van Textielbaas — bedrukken en borduren"
+              alt="Custom apparel studio van Textielbaas voor bedrukken en borduren"
               fill
               className="object-cover"
               sizes="(min-width: 1152px) 1152px, 100vw"

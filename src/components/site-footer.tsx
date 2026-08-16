@@ -87,7 +87,7 @@ export function SiteFooter() {
       <div className="border-t border-border/70">
         <div className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} TEXTIELBAAS. Alle rechten voorbehouden.</p>
-          <p>Gevestigd in Akersloot — actief in heel Nederland.</p>
+          <p>Gevestigd in Akersloot, actief in heel Nederland.</p>
         </div>
       </div>
     </footer>

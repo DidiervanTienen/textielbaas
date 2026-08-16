@@ -15,7 +15,7 @@ export default function OverOnsPage() {
       <PageHero
         eyebrow="Over ons"
         title="Een atelier, geen webshop."
-        intro="TEXTIELBAAS is opgericht vanuit de overtuiging dat kleding met een logo persoonlijk aandacht verdient — geen anoniem bestelformulier, maar echt contact."
+        intro="TEXTIELBAAS is opgericht vanuit de overtuiging dat kleding met een logo persoonlijk aandacht verdient, geen anoniem bestelformulier, maar echt contact."
       />
 
       <div className="mx-auto max-w-6xl px-6">
@@ -30,7 +30,7 @@ export default function OverOnsPage() {
             duidelijke offerte op maat.
           </p>
           <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-            Vanuit ons atelier in Akersloot bedrukken en borduren we met zorg — voor
+            Vanuit ons atelier in Akersloot bedrukken en borduren we met zorg, voor
             bedrijven, teams en particulieren door heel Nederland. Elk project krijgt
             persoonlijk advies over de beste techniek, het juiste kledingstuk en de
             stofkleur die precies klopt.

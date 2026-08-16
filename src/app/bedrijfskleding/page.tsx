@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const CASES = [
   {
     title: "Personeel & horeca",
-    body: "Poloshirts, werkjassen en schorten met borstlogo — herkenbaar en representatief voor je zaak.",
+    body: "Poloshirts, werkjassen en schorten met borstlogo, herkenbaar en representatief voor je zaak.",
     image: "/images/bedrijfskleding/horeca.png",
   },
   {
@@ -84,7 +84,7 @@ export default function BedrijfskledingPage() {
             </h2>
             <p className="mx-auto mt-4 max-w-md text-foreground/70">
               Stuur je logo en aantallen door, dan stellen wij een duidelijke offerte
-              op — inclusief materiaal- en technieksadvies.
+              op, inclusief materiaal- en technieksadvies.
             </p>
             <Link
               href="/offerte"
