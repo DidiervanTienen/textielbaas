@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
@@ -16,18 +17,22 @@ const TECHNIQUES = [
   {
     title: "DTF-print",
     body: "Full colour, fijne details en foto-realistische ontwerpen. Geschikt voor kleine en grote oplages.",
+    image: "/images/bedrukken-borduren/dtf.png",
   },
   {
     title: "Flexfolie",
     body: "Strakke, ondoorzichtige belettering en logo's in effen kleuren — duurzaam en scherp uitgesneden.",
+    image: "/images/bedrukken-borduren/flexfolie.png",
   },
   {
     title: "Zeefdruk",
     body: "De beste keuze bij grotere oplages met een beperkt aantal kleuren — dekkend en kleurvast.",
+    image: null,
   },
   {
     title: "Borduren",
     body: "Een klassieke, premium afwerking tot 12 kleuren. Ideaal voor borstlogo's op poloshirts en jassen.",
+    image: "/images/bedrukken-borduren/borduren.png",
   },
 ];
 
@@ -59,11 +64,23 @@ export default function BedrukkenBordurenPage() {
           {TECHNIQUES.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.06}>
               <div className="flex h-full items-center gap-5 overflow-hidden rounded-2xl border border-border bg-linen-deep p-5">
-                <PlaceholderPhoto
-                  compact
-                  aspect="aspect-square"
-                  className="w-28 shrink-0"
-                />
+                {item.image ? (
+                  <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-xl">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                      sizes="112px"
+                    />
+                  </div>
+                ) : (
+                  <PlaceholderPhoto
+                    compact
+                    aspect="aspect-square"
+                    className="w-28 shrink-0"
+                  />
+                )}
                 <div>
                   <h3 className="font-display text-xl text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/70">{item.body}</p>

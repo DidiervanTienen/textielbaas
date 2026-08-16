@@ -13,7 +13,7 @@ export function PlaceholderPhoto({
 }) {
   return (
     <div
-      className={`relative flex ${aspect} w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border border-dashed border-[var(--hairline)] bg-linen-deep ${className}`}
+      className={`relative flex ${aspect} ${compact ? "" : "w-full"} flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border border-dashed border-[var(--hairline)] bg-linen-deep ${className}`}
     >
       <svg
         viewBox="0 0 64 64"
