@@ -56,7 +56,7 @@ export default function Home() {
               className="animate-rise mt-7 max-w-md text-lg leading-relaxed text-foreground/75"
               style={{ animationDelay: "0.16s" }}
             >
-              Bedrijfskleding, teamwear en custom kleding — bedrukt of geborduurd.
+              Bedrijfskleding, teamwear en custom kleding, bedrukt of geborduurd.
               Persoonlijk afgestemd, zorgvuldig afgewerkt.
             </p>
             <div

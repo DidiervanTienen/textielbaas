@@ -26,7 +26,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "TEXTIELBAAS — Bedrijfskleding & custom kleding met logo",
   description:
-    "Bedrijfskleding, teamwear en custom kleding — bedrukt of geborduurd. Persoonlijk afgestemd, zorgvuldig afgewerkt. Atelier in Akersloot.",
+    "Bedrijfskleding, teamwear en custom kleding, bedrukt of geborduurd. Persoonlijk afgestemd, zorgvuldig afgewerkt. Atelier in Akersloot.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
