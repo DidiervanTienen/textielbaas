@@ -10,7 +10,7 @@ import { PlaceholderPhoto } from "@/components/placeholder-photo";
 export const metadata: Metadata = {
   title: "Bedrukken & borduren — TEXTIELBAAS",
   description:
-    "DTF-print en borduren, in meer dan 50 unieke stofkleuren — wij adviseren de beste afwerking voor jouw ontwerp.",
+    "DTF-print en borduren — wij adviseren de beste afwerking en stofkleur voor jouw ontwerp.",
 };
 
 const TECHNIQUES = [
@@ -83,11 +83,21 @@ export default function BedrukkenBordurenPage() {
             Stofkleuren
           </p>
           <h2 className="mt-5 font-display text-2xl text-foreground sm:text-3xl">
-            Meer dan 50 unieke stofkleuren, klaar om te combineren met jouw ontwerp.
+            Stof in de kleur die bij jouw merk past.
           </h2>
           <div className="mt-8 inline-flex flex-col items-center rounded-2xl border border-border bg-linen-deep px-8 py-7">
             <FabricSwatches />
           </div>
+          <p className="mx-auto mt-6 max-w-sm text-sm text-foreground/60">
+            Neem contact met ons op voor het volledige overzicht van kleuren,
+            stoffen en producten.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-2 inline-block font-mono-label text-[12px] uppercase tracking-[0.08em] text-thread transition-colors hover:text-foreground"
+          >
+            Neem contact op →
+          </Link>
         </Reveal>
       </section>
 

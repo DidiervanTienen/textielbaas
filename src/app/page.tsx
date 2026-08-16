@@ -7,7 +7,7 @@ import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 const FACTS = [
   { label: "Technieken", value: "DTF-print · Borduren" },
-  { label: "Stofkleuren", value: "50+ opties" },
+  { label: "Stofkleuren", value: "Ruime keuze" },
   { label: "Oplage", value: "Vanaf 1 stuk" },
   { label: "Levertijd", value: "± 2–3 weken" },
 ];
@@ -76,10 +76,14 @@ export default function Home() {
 
           <Reveal delay={0.3} className="rounded-2xl border border-border bg-linen-deep p-7">
             <p className="text-sm leading-relaxed text-foreground/75">
-              Elk stuk wordt met zorg bedrukt of geborduurd — kies hieronder uit
-              meer dan 50 unieke stofkleuren.
+              Elk stuk wordt met zorg bedrukt of geborduurd, in de stofkleur die
+              bij jouw merk past.
             </p>
             <FabricSwatches className="mt-6" />
+            <p className="mt-6 text-sm text-foreground/60">
+              Neem contact met ons op voor het volledige overzicht van kleuren,
+              stoffen en producten.
+            </p>
           </Reveal>
         </div>
       </section>
