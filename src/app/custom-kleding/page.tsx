@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { StitchDivider } from "@/components/stitch-divider";
-import { PlaceholderPhoto } from "@/components/placeholder-photo";
 
 export const metadata: Metadata = {
   title: "Custom kleding — TEXTIELBAAS",
@@ -15,14 +15,17 @@ const CASES = [
   {
     title: "Events & feesten",
     body: "Vrijgezellenfeesten, festivals of familiedagen — kleding met een ontwerp dat het moment vastlegt.",
+    image: "/images/custom-kleding/events.png",
   },
   {
     title: "Vriendengroepen",
     body: "Matching hoodies of shirts met een eigen ontwerp, al vanaf één stuk mogelijk.",
+    image: "/images/custom-kleding/vriendengroepen.png",
   },
   {
     title: "Sportteams",
     body: "Teamshirts met naam en nummer, in de kleuren en stijl die bij je team passen.",
+    image: "/images/custom-kleding/sportteams.png",
   },
 ];
 
@@ -37,11 +40,16 @@ export default function CustomKledingPage() {
 
       <section className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <PlaceholderPhoto
-            label="Custom kleding — sfeerfoto"
-            hint="Aanbevolen: brede foto van een custom ontwerp in actie"
-            aspect="aspect-[21/9]"
-          />
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/custom-kleding/sfeerfoto.png"
+              alt="Custom kleding met eigen ontwerp voor teams en groepen"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1152px) 1152px, 100vw"
+              priority
+            />
+          </div>
         </Reveal>
       </section>
 
@@ -54,7 +62,15 @@ export default function CustomKledingPage() {
           {CASES.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.08}>
               <div className="h-full overflow-hidden rounded-2xl border border-border bg-linen-deep">
-                <PlaceholderPhoto label={item.title} className="rounded-none border-x-0 border-t-0" />
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 640px) 33vw, 100vw"
+                  />
+                </div>
                 <div className="p-7">
                   <h3 className="font-display text-xl text-foreground">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.body}</p>
